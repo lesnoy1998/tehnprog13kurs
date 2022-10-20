@@ -1,0 +1,11 @@
+5
+1
+Golub|Siziy|Spb|4ervi, zhuki
+2
+Obichnaya|Rizhiy|Letov Egor|Murka
+1
+Snegir|Svetliy|Moskva|Listya
+2
+Russkaya Golubaya|Seriy|Shnurov Oleg|Mosya
+3
+Shuka|Seriy|Hishnik

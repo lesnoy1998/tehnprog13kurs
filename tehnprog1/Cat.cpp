@@ -2,6 +2,8 @@
 
 Cat::Cat()
 {
+	setlocale(LC_ALL, "ru");
+	cout << "\n*Вы наблюдаете рождение кошки*\n";
 	owner = new char[MAX_LEN_STR];
 	name = new char[MAX_LEN_STR];
 	owner[0] = '\0';
@@ -9,6 +11,8 @@ Cat::Cat()
 }
 Cat::~Cat()
 {
+	setlocale(LC_ALL, "ru");
+	cout << "\n*Кошка исчезла у вас на глазах*\n";
 	delete[] name;
 	delete[] owner;
 }
@@ -86,4 +90,39 @@ void Cat::read(char* str)
 		}
 		if (spc > 3) { break; }
 	}
+}
+void Cat::edit1()
+{
+	setlocale(LC_ALL, "ru");
+	cout << "Что именно вы хотите изменить?\n1 - порода\n2 - окрас\n3 - ФИО хозяина\n4 - кличку\n";
+	int n;
+	cin >> n;
+	getchar();
+	char* ccc = new char[100];
+	switch (n)
+	{
+	case 1:
+		cout << "Введите породу кошки\n";
+		gets_s(ccc, 100);
+		this->setPoroda(ccc);
+		break;
+	case 2:
+		cout << "Введите окрас кошки\n";
+		gets_s(ccc, 100);
+		this->setColor(ccc);
+		break;
+	case 3:
+		cout << "Введите ФИО хозяина кошки\n";
+		gets_s(ccc, 100);
+		strcpy(owner, ccc);
+		break;
+	case 4:
+		cout << "Введите кличку кошки\n";
+		gets_s(ccc, 100);
+		strcpy(name, ccc);
+		break;
+	default:
+		break;
+	}
+	delete[] ccc;
 }
