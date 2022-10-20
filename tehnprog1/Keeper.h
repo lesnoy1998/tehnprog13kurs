@@ -17,5 +17,6 @@ public:
 
 	void save();
 	void backup();
+	void edit1();
 };
 
