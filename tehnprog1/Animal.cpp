@@ -4,6 +4,8 @@
 
 Animal::Animal()
 {
+	setlocale(LC_ALL, "ru");
+	cout << "\n*Стоп! Что-то происходит...*";
 	poroda = new char[MAX_LEN_STR];
 	color = new char[MAX_LEN_CLR];
 	poroda[0] = '\0';
@@ -11,6 +13,8 @@ Animal::Animal()
 }
 Animal::~Animal()
 {
+	setlocale(LC_ALL, "ru");
+	cout << "\n*Стоп! Что-то исчезает...*";
 	delete[] poroda;
 	delete[] color;
 }

@@ -157,3 +157,44 @@ void Keeper::backup()
 
 	fclose(f1);
 }
+void Keeper::edit1()
+{
+	cout << "Введите номер элемента?\n";
+	int ns, n1;
+	cin >> ns;
+	if ((ns < 1) || (ns > cnt)) { return; }
+	cout << "Вы хотите изменить животное под этим номером?\n1 - да\n2 - нет\n";
+	cin >> n1;
+	if ((n1 < 1) || (n1 > 2)) { return; }
+	if (n1 == 2)
+	{
+		archive[ns - 1]->edit1();
+	}
+	else
+	{
+		cout << "Какое животное вы хотите добавить в список?\n1 - Птица\n2 - Рыба\n3 - Кошка\n";
+		int n;
+		cin >> n;
+		
+		switch (n)
+		{
+		case 1:
+			delete archive[ns-1];
+			archive[ns-1] = new Bird;
+			archive[ns-1]->edit();
+			break;
+		case 2:
+			delete archive[ns-1];
+			archive[ns-1] = new Fish;
+			archive[ns-1]->edit();
+			break;
+		case 3:
+			delete archive[ns-1];
+			archive[ns-1] = new Cat;
+			archive[ns-1]->edit();
+			break;
+		default:
+			break;
+		}
+	}
+}

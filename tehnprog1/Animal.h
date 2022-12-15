@@ -27,6 +27,6 @@ public:
 
 	virtual void save(char* str) = 0;
 	virtual void read(char* str) = 0;
-	
+	virtual void edit1() = 0;
 };
 

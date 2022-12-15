@@ -16,5 +16,6 @@ public:
 
     void save(char* str);
     void read(char* str);
+    void edit1();
 };
 
